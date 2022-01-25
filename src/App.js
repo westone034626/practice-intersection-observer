@@ -9,11 +9,9 @@ function App() {
   const ulRef = useRef(null);
   const callback = (entries) =>
     _.forEach(entries, (entry) => {
+      entry.target.classList.toggle(styles.show, entry.isIntersecting);
       if (entry.isIntersecting) {
-        entry.target.className = `${styles.liItem} ${styles.show}`;
         observer.unobserve(entry.target);
-      } else {
-        entry.target.className = styles.liItem;
       }
     });
   const observer = new IntersectionObserver(callback, { threshold: 0 });
