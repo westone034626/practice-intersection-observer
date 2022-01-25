@@ -1,0 +1,15 @@
+.liItem {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 1s;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-width: 1;
+  border-color: black;
+  border-style: solid;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
